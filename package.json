@@ -1,0 +1,22 @@
+{
+  "name": "node-speech-transcriber",
+  "version": "1.0.0",
+  "description": "Utilities for transcribing audio with speech-to-text APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannguyen/node-speech-transcriber.git"
+  },
+  "keywords": [
+    "audio"
+  ],
+  "author": "Dan Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannguyen/node-speech-transcriber/issues"
+  },
+  "homepage": "https://github.com/dannguyen/node-speech-transcriber#readme"
+}
