@@ -1,5 +1,5 @@
-jest.unmock('../lib/foo');
-import {foo, Doo} from '../lib/foo';
+jest.unmock('../../lib/foo/foo');
+import {foo, Doo} from '../../lib/foo/foo';
 
 
 

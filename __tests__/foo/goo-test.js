@@ -1,7 +1,5 @@
-// jest.unmock('node-ffprobe')
-// jest.unmock('../lib/goo')
 jest.disableAutomock()
-import Goo from '../lib/goo';
+import Goo from '../../lib/foo/goo';
 
 
 describe('gooProbe', () => {

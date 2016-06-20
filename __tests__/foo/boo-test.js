@@ -1,6 +1,6 @@
 jest.unmock('request')
-jest.unmock('../lib/boo');
-import Boo from '../lib/boo';
+jest.unmock('../../lib/foo/boo');
+import Boo from '../../lib/foo/boo';
 
 
 describe('Booze', () => {
