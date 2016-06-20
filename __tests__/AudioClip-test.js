@@ -1,15 +1,35 @@
-jest.unmock('../lib/AudioClip');
+// jest.unmock('../lib/AudioClip');
+jest.disableAutomock()
 import AudioClip from '../lib/AudioClip';
 
 
-describe('AudioClip', () => {
-  const myfilename = './fixtures/obama-wh-1984.m4a';
-  let myclip = new AudioClip(myfilename)
-  it('should be initialized with a filename', () => {
-    expect(myclip.sourceFilename).toBe(myfilename);
-  });
-
-  it('should have a duration', () => {
-    expect(myclip.duration).toBe(4.7);
+describe('AudioClip.load', () => {
+  const myfilename = './__tests__/fixtures/obama-wh-1984.m4a';
+  it('should result in an AudioClip', async () => {
+    let myclip = await AudioClip.load(myfilename);
+    expect(myclip instanceof AudioClip).toBe(true);
   })
 });
+
+describe('AudioClip', () => {
+  const myfilename = './__tests__/fixtures/obama-wh-1984.m4a';
+  let myclip = null;
+  beforeEach(done => {
+    AudioClip.load(myfilename).then(x => { myclip = x; done(); });
+  })
+
+  it('should have a duration', done => {
+    expect(myclip.duration).toBe(4.71);
+    done();
+  })
+
+  it('should have a filepath', done => {
+    expect(myclip.filepath).toBe('dude');
+    done();
+  })
+
+  it('should have a codec', done => {
+    expect(myclip.codec).toBe('dude');
+    done();
+  })
+})

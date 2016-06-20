@@ -1,6 +1,8 @@
 jest.unmock('../lib/foo');
 import {foo, Doo} from '../lib/foo';
 
+
+
 describe('foo', () => {
   it('should be full of foo', () => {
     expect(foo(2, 2)).toBe(5);
